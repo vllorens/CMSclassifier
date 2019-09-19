@@ -192,7 +192,7 @@ naImpute <- function(Exp,G=NULL){
         if(!is.null(G)) {
             tmp <- as.data.frame(array(mm,dim=c(length(G),ncol(Exp))))
             rownames(tmp) <- G
-            names(tmp) <- names(Exp)
+            colnames(tmp) <- colnames(Exp)
             Exp <- rbind(Exp,tmp)
         }       
         Exp
